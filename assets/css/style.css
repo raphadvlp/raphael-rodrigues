@@ -44,7 +44,7 @@ header {
 .topo {
     display: flex;
     width: 100%;
-    height: 6rem;
+    height: 7rem;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -54,7 +54,47 @@ header {
     display: flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    /* width: 50px; LOGO REDONDA */
+    height: auto;
+    border-radius: 50px;
+}
+
+.menu-mobile {
+    display: none;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    content: '';
+    flex-direction: column;
+}
+
+.menu-mobile .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #FFF;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.menu-mobile:hover {
+    cursor: pointer;
+}
+
+/* .logo span {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-left: 10px;
+} */
 
 nav ul {
     display: flex;
@@ -70,7 +110,7 @@ nav ul li:hover {
 }
 
 
-/* HEADER INFO */
+/*! HEADER INFO */
 
 .header-info {
     display: flex;
@@ -156,7 +196,7 @@ nav ul li:hover {
 }
 
 
-/* SOBRE */
+/*! SOBRE */
 
 #sobre,
 #projetos,
@@ -217,7 +257,7 @@ nav ul li:hover {
     height: auto;
 }
 
-/* PROJETOS */
+/*! PROJETOS */
 
 .projetos-info {
     display: flex;
@@ -248,6 +288,7 @@ nav ul li:hover {
     padding: 2rem;
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+    width: 300px;
 }
 
 .projeto:hover {
@@ -256,7 +297,7 @@ nav ul li:hover {
 }
 
 .projeto img {
-    width: 250px;
+    width: 150px;
 }
 
 .techs{
@@ -298,7 +339,7 @@ nav ul li:hover {
 
 
 
-/* CONTATOS */
+/*! CONTATOS */
 
 .contatos {
     display: flex;
@@ -315,7 +356,7 @@ nav ul li:hover {
     font-weight: bold;
 }
 
-/* FORM */
+/*! FORM */
 
 form {
     display: flex;
@@ -374,14 +415,6 @@ footer {
     height: 60px;
     font-style: italic;
     font-size: 1.3rem;
-}
-
-@keyframes swingingWapp {
-    50% { transform: translateY(30px) }
-}
-
-@keyframes swingingArrow {
-    50% { transform: translateY(10px) }
 }
 
 .redesBar {
@@ -470,6 +503,17 @@ footer {
   }
   
 
+
+/*! ANIMAÇÕS */
+
+@keyframes swingingWapp {
+    50% { transform: translateY(30px) }
+}
+
+@keyframes swingingArrow {
+    50% { transform: translateY(10px) }
+}
+
   @keyframes digita {
     10%,
     15%,
@@ -505,22 +549,341 @@ footer {
   @keyframes palavras {
     0%,
     20% {
-        content: "Front-end";
+        content: "Front-end.";
     }
     21%,
     40% {
-        content: "Web Desktop";
+        content: "Web Desktop.";
     }
     41%,
     60% {
-        content: "Web Mobile";
+        content: "Web Mobile.";
     }
     61%,
     80% {
-        content: "Front-end";
+        content: "Front-end.";
     }
     81%,
     100% {
-        content: "Web Desktop";
+        content: "Web Desktop.";
     }
   }
+
+
+  /*! RESPOSIVIDADE */
+
+@media (width <= 640px) {
+
+    .menu-mobile{ 
+        display: flex;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-dados h1 {
+        font-size: 4rem;
+    }
+
+    .header-dados p {
+        font-size: 2rem;
+    }
+
+    .infos a p {
+        font-size: 1.5rem;
+    }
+
+    .redes a img{
+        width: 20px;
+    }
+
+    .redesBar {
+        width: 40px;
+        height: 120px;
+    }
+
+    .redesBar img {
+        width: 20px;
+    }
+
+    .sobre p {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .habilidades-icons {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .projetos {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    form .input-div input {
+        width: 400px;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (width > 640px) and (width <= 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .menu-mobile{ 
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-dados h1 {
+        font-size: 4rem;
+    }
+
+    .header-dados p {
+        font-size: 2rem;
+    }
+
+    .infos a p {
+        font-size: 1.5rem;
+    }
+
+    .redes a img{
+        width: 20px;
+    }
+
+    .redesBar {
+        width: 40px;
+        height: 120px;
+    }
+
+    .redesBar img {
+        width: 20px;
+    }
+
+    .sobre p {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .projeto {
+        width: 250px;
+    }
+
+    .habilidades-icons {
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    form .input-div input {
+        width: 400px;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (width > 768px) and (width <= 1024px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-dados h1 {
+        font-size: 4rem;
+    }
+
+    .header-dados p {
+        font-size: 2rem;
+    }
+
+    .infos a p {
+        font-size: 1.5rem;
+    }
+
+    .redes a img{
+        width: 20px;
+    }
+
+    .redesBar {
+        width: 40px;
+        height: 120px;
+    }
+
+    .redesBar img {
+        width: 20px;
+    }
+
+    .sobre p {
+        width: 80%;
+        font-size: 2rem;
+    }
+    
+    .projetos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    form .input-div input {
+        width: 400px;
+    }
+
+    textarea {
+        width: 400px;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (width > 1024px) {
+    .topo {
+        padding: 0px 10px;
+    }
+}
+
+
+
+
+
+/* 
+.header-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .header-dados h1 {
+        font-size: 4rem;
+    }
+
+    .header-dados p {
+        font-size: 2rem;
+    }
+
+    .infos a p {
+        font-size: 1.5rem;
+    }
+
+    .redes a img{
+        width: 20px;
+    }
+
+    .redesBar img {
+        width: 20px;
+    }
+
+    .projetos-info h1 {
+        font-size: 3rem;
+    }
+
+    .projeto {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+*/
+
