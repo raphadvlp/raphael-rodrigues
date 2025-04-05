@@ -297,7 +297,9 @@ nav ul li:hover {
 }
 
 .projeto img {
-    width: 150px;
+    width: 300px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 .techs{
