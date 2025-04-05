@@ -582,6 +582,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
     }
 
     .topo {
@@ -666,6 +667,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
     }
 
     .topo {
@@ -840,50 +842,3 @@ footer {
         padding: 0px 10px;
     }
 }
-
-
-
-
-
-/* 
-.header-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .header-dados h1 {
-        font-size: 4rem;
-    }
-
-    .header-dados p {
-        font-size: 2rem;
-    }
-
-    .infos a p {
-        font-size: 1.5rem;
-    }
-
-    .redes a img{
-        width: 20px;
-    }
-
-    .redesBar img {
-        width: 20px;
-    }
-
-    .projetos-info h1 {
-        font-size: 3rem;
-    }
-
-    .projeto {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-*/
-
