@@ -578,6 +578,10 @@ footer {
         display: flex;
     }
 
+    header {
+        height: 100%;
+    }
+
     .header {
         display: flex;
         align-items: center;
@@ -663,6 +667,10 @@ footer {
 }
 
 @media (width > 640px) and (width <= 768px) {
+    header {
+        height: 100%;
+    }
+
     .header {
         display: flex;
         align-items: center;
