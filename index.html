@@ -46,13 +46,13 @@
                     <div class="header-dados">
                         <div class="infos">
                             <div class="infor-messagens">
-                                <h1>Olá, meu nome é <span>Raphael</span>.</h1>
+                                <h1>Olá, eu sou <span>Raphael</span>.</h1>
                                 <p class="txt-animado">Sou desenvolvedor <span></span></p>
                                 <p>Pronto para solucionar seus problemas digitais.</p>
                             </div>
 
                             <a href="#" class="btn">
-                                <p>Baixar C.V</p>
+                                <p>Baixar CV</p>
                             </a>
                         </div>
                         <div class="redes">
@@ -91,13 +91,15 @@
             <div class="habilidades">
                 <span>Experiencia</span>
                 <div class="habilidades-icons">
-                    <img src="assets/image/html.svg" alt="">
-                    <img src="assets/image/css.svg" alt="">
-                    <img src="assets/image/javascript.svg" alt="">
-                    <img src="assets/image/angular.svg" alt="">
-                    <img src="assets/image/reactjs.svg" alt="">
-                    <img src="assets/image/firebase.svg" alt="">
-                    <img src="assets/image/mysql.svg" alt="">
+                    <img src="assets/image/html.svg" alt="" title="HTML5">
+                    <img src="assets/image/css.svg" alt="" title="CSS3">
+                    <img src="assets/image/javascript.svg" alt="" title="JavaScript">
+                    <img src="assets/image/typescript.svg" alt="" title="TypeScript">
+                    <img src="assets/image/angular.svg" alt="" title="Angular">
+                    <img src="assets/image/reactjs.svg" alt="" title="ReactJS">
+                    <img src="assets/image/firebase.svg" alt="" title="Firebase">
+                    <img src="assets/image/oracle.svg" alt="" title="Oracle">
+                    <img src="assets/image/mysql.svg" alt="" title="MySQL">
                 </div>
             </div>
         </div>
@@ -281,20 +283,20 @@
         <div class="container">
             <div class="contatos">
                 <span class="title">Contatos</span>
-                <form action="">
+                <form action="" id="discordForm">
                     <div class="input-div">
-                        <span>Nome Completo</span>
-                        <input type="text" name="nome" id="nome" placeholder="Digite sue nome completo">
+                        <!-- <span>Nome Completo</span> -->
+                        <input type="text" name="nome" id="name" placeholder="Nome">
                     </div>
                     <div class="input-div">
-                        <span>Telefone</span>
-                        <input type="tel" name="nome" id="nome" placeholder="Digite seu telefone para contato">
+                        <!-- <span>Telefone</span> -->
+                        <input type="email" name="email" id="email" placeholder="E-mail">
                     </div>
                     <div class="input-div">
-                        <span>Mensagem</span>
-                        <textarea name="" id="" placeholder="Deixe aqui sua mensagem..."></textarea>
+                        <!-- <span>Mensagem</span> -->
+                        <textarea name="" id="mensagem" placeholder="Mensagem"></textarea>
                     </div>
-                    <button class="btn-form" type="submit">Enviar</button>
+                    <button class="btn-form" type="submit">Enviar mensagem &rarr;</button>
                 </form>
             </div>
         </div>
@@ -321,6 +323,10 @@
             <img src="assets/image/arrow.svg" alt="">
         </a>
     </div>
-    <script src="assets/js/arrowTop.js"></script>
+
+    <div id="toast" class="" style="display: none;"></div>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
