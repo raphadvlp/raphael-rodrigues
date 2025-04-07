@@ -10,15 +10,48 @@ window.addEventListener('scroll', showBtn);
 
 
 // Mobile menu
-// .menu-mobile:hover .bar:nth-child(1) {
-//     transform: rotate(45deg) translate(5px, 5px);
-// }
-// .menu-mobile:hover .bar:nth-child(2) {
-//     opacity: 0;
-// }
-// .menu-mobile:hover .bar:nth-child(3) {
-//     transform: rotate(-45deg) translate(5px, -5px);
-// }
+const menuMobile = document.querySelector('.menu-mobile');
+const navbar = document.querySelector('.navbar');
+const bars = document.querySelectorAll('.menu-mobile .bar');
+const body = document.body;
+const textAnimation = document.querySelector('.txt-animado');
+
+menuMobile.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    menuMobile.classList.toggle('active');
+
+    // Trava/destrava o scroll
+    body.classList.toggle('no-scroll');
+
+    // Alterna a visibilidade do textAnimation
+    if(textAnimation) {
+      textAnimation.style.display = menuMobile.classList.contains('active') ? 'none' : 'flex';
+  }
+    
+    // // Animação dos bars (transforma em X)
+    // if(menuMobile.classList.contains('active')) {
+    //     bars[0].style.transform = 'translateY(8px) rotate(45deg)';
+    //     bars[1].style.opacity = '0';
+    //     bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+    // } else {
+    //     bars[0].style.transform = 'none';
+    //     bars[1].style.opacity = '1';
+    //     bars[2].style.transform = 'none';
+    // }
+});
+
+// Fechar o menu ao clicar em um link
+const navLinks = document.querySelectorAll('.navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menuMobile.classList.remove('active');
+        body.classList.remove('no-scroll');
+        bars[0].style.transform = 'none';
+        bars[1].style.opacity = '1';
+        bars[2].style.transform = 'none';
+    });
+});
 
 
 
